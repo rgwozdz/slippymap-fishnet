@@ -1,0 +1,20 @@
+version: '3'
+services:
+
+  postgres:
+    build: ./postgres
+    image: postgres10.1:1.0
+    container_name: postgres10.1
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+      - ./postgres/src:/home/postgres/src/
+      - ./osm-cache:/usr/osm-cache
+#  osm2pgsql:
+#    build: ./osm2pgsql
+#    image: osm2pgsql:1.0
+#    container_name: osm2pgsql
+#    volumes:
+#      - ./osm2pgsql/src:/usr/src
+#      - ./osm-cache:/usr/osm-cache
