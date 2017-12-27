@@ -60,5 +60,6 @@ typings/
 **.idea
 
 postgres-data/**
+osm-cache/**
 postgres/src/land-polygons-complete-3857/**
 **.pbf
